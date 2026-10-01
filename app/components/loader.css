@@ -1,0 +1,126 @@
+
+
+
+
+
+
+
+.loader{
+  position:fixed;
+  inset:0;
+  width:100%;
+  height:100vh;
+  background:#f7f7f4;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  overflow:hidden;
+  z-index:9999;
+  transform-origin:center;
+}
+
+/* ================= Grain ================= */
+
+.grain{
+  position:absolute;
+  inset:0;
+  opacity:.05;
+  pointer-events:none;
+  background-image:
+    radial-gradient(#000 0.8px, transparent 0.8px),
+    radial-gradient(#000 0.8px, transparent 0.8px);
+  background-size:18px 18px;
+  background-position:0 0,9px 9px;
+}
+
+/* ================= Center ================= */
+
+.center{
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+  overflow:hidden;
+}
+
+.name{
+  font-size:clamp(40px,5vw,110px);
+  font-weight:300;
+  letter-spacing:-0.06em;
+  color:#111;
+  line-height:1;
+  white-space:nowrap;
+}
+
+.short{
+  position:absolute;
+  width:100%;
+  left:0;
+  top:0;
+  opacity:0;
+  text-align:center;
+  font-size:clamp(40px,5vw,110px);
+  font-weight:300;
+  letter-spacing:-0.06em;
+  color:#111;
+  line-height:1;
+}
+
+/* ================= Progress ================= */
+
+.progress{
+  position:absolute;
+  right:60px;
+  bottom:45px;
+  font-size:clamp(70px,8vw,170px);
+  font-weight:300;
+  color:#111;
+  line-height:1;
+  letter-spacing:-0.08em;
+}
+
+/* SplitType */
+
+.line{
+  overflow:hidden;
+}
+
+.word{
+  display:inline-block;
+}
+
+.char{
+  display:inline-block;
+}
+
+/* ================= Mobile ================= */
+
+@media(max-width:768px){
+
+.name,
+.short{
+  font-size:48px;
+  text-align:center;
+  white-space:normal;
+}
+
+.progress{
+  right:24px;
+  bottom:24px;
+  font-size:70px;
+}
+
+}
+
+@media(max-width:480px){
+
+.name,
+.short{
+  font-size:38px;
+}
+
+.progress{
+  font-size:58px;
+}
+
+}
